@@ -45,11 +45,15 @@ i *= 5;
 console.log(i);
 
 //operador unario
-i++;//asignar despues de usar
+i++; //asignar despues de usar
 console.log(i);
-i--;//restar despues de usar
+i--; //restar despues de usar
 console.log(i);
-++i;//asignar antes de usar
+++i; //asignar antes de usar
 console.log(i);
---i;//restar antes de usar
+--i; //restar antes de usar
 console.log(i);
+
+//operadores logicos ! -> not, || -> or, && -> and
+
+console.log(7 == 6 || 10 >= 9);
