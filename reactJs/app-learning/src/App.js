@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Componente from "./componentes/Componente";
+import Propiedades from "./componentes/Propiedades";
 
 function App() {
-  let name = "Otaku SF";
-  let meses = ["enero", "Febrero", "Marzo"];
   return (
-    <>
-      <div className="App">
-        <header className="App-header">
+    <div className="App">
+      <header className="App-header">
+        <section>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Editar <code>src/App.js</code> and save to reload.
@@ -18,20 +18,26 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React {name}
+            Learn React
           </a>
-        </header>
-        <div className="footer">
-          <ul>
-            {meses.map((mes, index) => (
-              <li key={index}>
-                <h1>{mes}</h1>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </>
+        </section>
+
+        <section>
+          <Componente msg="Soy Un Componente" />
+          <hr />
+          <Propiedades
+            cadena="esta es una cadena"
+            numero={27}
+            booleano={false}
+            arreglo={[1, 2, 3, 4]}
+            objeto={{ name: "freddy", age: "34" }}
+            funcion={(num) => num * num}
+            elementoReact={<i>Esto es un elemento react</i>}
+            componenteReact={<Componente msg="Soy Un componete como props" />}
+          />
+        </section>
+      </header>
+    </div>
   );
 }
 
